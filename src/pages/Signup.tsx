@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { useAuthStore } from '../store/authStore';
 import { Button, Container, TextInput, Text } from '@mantine/core';
-import { useNavigate, Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
-const Login = () => {
-  const { login, error, clearError } = useAuthStore();
+const Signup = () => {
+  const { signup, error, clearError } = useAuthStore();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = () => {
+  const handleSignup = () => {
     clearError();
     if (username && password) {
-      if (login(username, password)) {
+      if (signup(username, password)) {
         navigate('/resources');
       }
     }
@@ -20,7 +20,7 @@ const Login = () => {
 
   return (
     <Container>
-      <h1>Login</h1>
+      <h1>Signup</h1>
       <TextInput
         placeholder="Enter your username"
         value={username}
@@ -34,13 +34,10 @@ const Login = () => {
         onChange={(e) => setPassword(e.target.value)}
         mb="sm"
       />
-      <Button onClick={handleLogin} mr="sm">Login</Button>
-      <Link to="/signup">
-        <Button variant="outline">Signup</Button>
-      </Link>
+      <Button onClick={handleSignup}>Signup</Button>
       {error && <Text color="red">{error}</Text>}
     </Container>
   );
 };
 
-export default Login;
+export default Signup;
