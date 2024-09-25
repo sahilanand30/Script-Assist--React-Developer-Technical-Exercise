@@ -6,7 +6,7 @@ A React app built as part of a technical exercise, demonstrating features such a
 
 ## Deployed Live Link
 
-<a href="https://script-assist-sahil.vercel.app/" target="_blank">https://script-assist-sahil.vercel.app/</a>
+<a href="https://script-assist-sahil.vercel.app/" target="_blank" rel="noopener noreferrer">https://script-assist-sahil.vercel.app/</a>
 
 ## Build Command
 
