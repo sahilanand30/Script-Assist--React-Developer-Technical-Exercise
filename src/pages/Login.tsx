@@ -19,8 +19,8 @@ const Login = () => {
   };
 
   return (
-    <Container>
-      <h1>Login</h1>
+    <Container style={{ marginTop: "10rem", maxWidth: "30rem" }}>
+      <h1 style={{ marginBottom: "1rem" }}>Login</h1>
       <TextInput
         placeholder="Enter your username"
         value={username}

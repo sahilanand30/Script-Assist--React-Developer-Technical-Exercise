@@ -1,97 +1,53 @@
 @use 'styles/abstracts';
 
-.blue-div {
-  background-color: abstracts.$darkblue;
-}
-
-.purple-div {
-  background-color: abstracts.$midpurple;
-}
-
 * {
   margin: 0;
   padding: 0;
-  font-family: abstracts.$font;
-  font-weight: normal;
+  box-sizing: border-box;
 }
 
-.display1 {
-  font-size: abstracts.$display1;
+body {
+  font-family: abstracts.$font, sans-serif;
+  background-color: abstracts.$backgroundColor;
+  color: abstracts.$textColor;
 }
 
-.display2 {
-  font-size: abstracts.$display2;
+.resource-detail-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-h1 {
+.resource-detail-card {
+  max-width: 500px;
+  padding: 2rem;
+  background-color: abstracts.$cardBackground;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card-title {
   font-size: abstracts.$heading1;
-  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-h2 {
-  font-size: abstracts.$heading2;
-}
+.card-content {
+  p {
+    font-size: abstracts.$paragraph1;
+    margin-bottom: 0.8rem;
 
-h3 {
-  font-size: abstracts.$heading3;
-}
-
-h3 {
-  font-size: abstracts.$heading4;
-}
-
-p,
-li {
-  font-size: abstracts.$paragraph1;
-}
-
-.p2 {
-  font-size: abstracts.$paragraph2;
-}
-
-.p3 {
-  font-size: abstracts.$paragraph3;
-}
-
-input,
-input::placeholder {
-  font-size: abstracts.$paragraph1;
-}
-
-
-@media(max-width: 600px) {
-  .display1 {
-    font-size: abstracts.$displayMob1;
-  }
-
-  .display2 {
-    font-size: abstracts.$displayMob2;
-  }
-
-  h1 {
-    font-size: abstracts.$headingMob1;
-    font-weight: bold;
-  }
-
-  h2 {
-    font-size: abstracts.$headingMob2;
-  }
-
-  h3 {
-    font-size: abstracts.$headingMob3;
-  }
-
-  p,
-  li {
-    font-size: abstracts.$paragraphMob1;
-  }
-
-  .p2 {
-    font-size: abstracts.$paragraphMob2;
-  }
-
-  .p3 {
-    font-size: abstracts.$paragraphMob3;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -104,8 +60,35 @@ input::placeholder {
   flex-direction: column;
 }
 
-@media(max-width: 600px) {
+.loader-text {
+  padding-top: 1rem;
+  font-size: abstracts.$paragraph2;
+}
+
+@media (max-width: 600px) {
+  .resource-detail-card {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: abstracts.$headingMob1;
+  }
+
+  .card-content {
+    p {
+      font-size: abstracts.$paragraphMob1;
+    }
+  }
+
   .loader-container {
     padding: 0 20px;
   }
+}
+
+.back-button {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 2rem;
+  margin-left: 5rem;
 }

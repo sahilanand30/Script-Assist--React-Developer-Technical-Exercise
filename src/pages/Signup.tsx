@@ -19,7 +19,7 @@ const Signup = () => {
   };
 
   return (
-    <Container>
+    <Container style={{marginTop:"10rem", maxWidth:"30rem"}}>
       <h1>Signup</h1>
       <TextInput
         placeholder="Enter your username"

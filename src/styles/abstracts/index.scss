@@ -1,2 +1,25 @@
 @forward './colours';
 @forward './fonts';
+
+
+// Colors
+$darkblue: #1e3a8a;
+$midpurple: #6d28d9;
+$backgroundColor: #f7fafc;  // Light background color
+$cardBackground: #ffffff;   // White card background
+$textColor: #2d3748;        // Darker text color
+
+// Typography
+$font: 'Roboto', sans-serif;
+
+$heading1: 2rem;
+$heading2: 1.75rem;
+$heading3: 1.5rem;
+$paragraph1: 1rem;
+$paragraph2: 0.875rem;
+
+// Mobile typography adjustments
+$headingMob1: 1.5rem;
+$headingMob2: 1.25rem;
+$paragraphMob1: 0.875rem;
+$paragraphMob2: 0.75rem;

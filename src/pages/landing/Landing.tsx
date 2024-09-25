@@ -6,7 +6,7 @@ const Landing = () => {
   const { isAuthenticated, logout } = useAuthStore();
 
   return (
-    <Container>
+    <Container style={{marginTop:"10rem", maxWidth:"40rem"}}>
       <Title align="center" mb="lg">
         Welcome to Resource Explorer
       </Title>
